@@ -1,0 +1,24 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "Set-Location 'c:\\Users\\makleydson.assis\\Downloads\\Teste_Claude'; git add -A; if (git diff --cached --name-only) { git commit -m 'Auto-update via Claude Code'; git push origin main }",
+            "shell": "powershell",
+            "timeout": 60,
+            "statusMessage": "Sincronizando com GitHub...",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git *)"
+    ]
+  }
+}

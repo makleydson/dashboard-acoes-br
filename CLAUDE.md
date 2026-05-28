@@ -33,3 +33,13 @@ Default date range is full-year 2025 (`2025-01-02` to `2025-12-31`). UI text is 
 ## No Test Suite
 
 There are no automated tests. Validate changes by running the app and exercising the UI.
+
+## GitHub Repository
+
+The project is hosted at: https://github.com/makleydson/dashboard-acoes-br
+
+**Auto-sync:** A Claude Code hook in `.claude/settings.json` automatically commits and pushes every file change (Edit/Write) to `origin main`. The hook runs asynchronously in the background — no manual `git push` needed.
+
+To check sync status: `git log --oneline -5` or `git status`.
+
+If the hook is not firing after opening a new session, open `/hooks` in Claude Code once to reload the config.
